@@ -1,0 +1,62 @@
+.location {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2vh;
+    color: white;
+    text-align: left;
+    font-weight: 100;
+    font-family: Helvetica, sans-serif;
+    padding: 10vh 0;
+
+    p, a{font-size: medium;}
+
+    #guide {
+        font-style: italic;
+        padding: 2vh 0;
+    }
+
+    .map {
+        border-radius: 15px;
+        overflow: hidden;
+        img {
+            height: 40vh;
+            transition: height 300ms;
+            object-fit: contain;
+        }
+    }
+    .map:hover {
+        img{height: 41vh;}
+    }
+}
+
+@media screen and (max-width: 991px) and (pointer: coarse) {
+    .location {
+        text-align: center;
+        flex-direction: column;
+        padding: 2vh 0;
+
+        .address {
+            text-align: left;
+        }
+        p, a {
+            font-size: small;
+            font-weight: 100;
+        }
+
+        #guide {
+            padding: 3vh 0;
+        }
+
+        .map {
+            width: 100%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .map:hover {
+            img{height:auto;}
+        }
+    }
+}

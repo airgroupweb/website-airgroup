@@ -1,0 +1,289 @@
+main {
+    .company_profile {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+
+        .image_text {
+            display: flex;
+            gap: 2vw;
+            justify-content: center;
+            margin-bottom: 2vh;
+
+            img {
+                width: 40%;
+                height: auto;
+                align-self: center;
+                object-fit: contain;
+                filter: brightness(0.75) contrast(1.1);
+            }
+            .text {
+                width: 40%;
+                text-align:justify;
+                display: flex;
+                align-items: center;
+                p {
+                    font-size: medium;
+                    font-weight: 100;
+                    b {font-weight: bold;}
+                }
+            }
+        }
+
+        #right_side {
+            P {
+                text-align: justify;
+            }
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            min-width: 100%;
+
+            img {
+                width: 100%;
+                position: absolute;
+                object-fit: cover;
+                z-index: -1;
+                filter: brightness(0.6) contrast(1.1);
+            }
+            h1 {
+                color: white;
+                font-weight: bold;
+                font-size: 25pt;
+                font-family: Helvetica, sans-serif;
+                letter-spacing: 1pt;
+                padding: 10vh 10vw;
+            }
+        }
+    }
+
+    h2 {
+        color: white;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        letter-spacing: 1pt;
+
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        padding: 5vh 0;
+        width: 100%;
+        box-sizing: border-box;
+        align-self: stretch;
+    }
+    h2::before, h2::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: white;
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 2vh;
+        }
+
+        .shell_inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: justify;
+        }
+
+        p {
+            font-size: medium;
+            font-weight: 100;
+            b {font-weight: bold;}
+            margin-bottom: 2vh;
+        }
+
+        .bullet_points {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 100%;
+
+            ul {
+                color: white;
+                margin-bottom: 2vh;
+                padding-left: 20px;
+                text-align: left;
+                font-family: Helvetica, sans-serif;
+            }
+        }
+        
+    }
+
+    .exchange {
+        .shell_inner {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 0vh 5vw;
+            gap: 2.5vh;
+
+            img {
+                width: 100%;
+                height: 30vh;
+                object-fit: cover;
+            }
+
+            p {
+                font-size: large;
+                text-align: justify;
+                font-weight: 100;
+            }
+        }
+    }
+
+    .warranty {
+        text-align: justify;
+        color: white;
+        img {
+                width: 100%;
+                margin-bottom: 5vh;
+                filter: contrast(1.25);
+            }
+        p {
+            font-size: large;
+            font-weight: 100;
+            margin-bottom: 2vh;
+        }
+        span {
+            font-size: large;
+            font-family: Helvetica, sans-serif;
+            a {
+                font-size: large;
+                font-weight: 100;
+            }
+        }
+    }
+
+    .repair, .rnd {
+        .shell_inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: justify;
+            color: white;
+            font-family: Helvetica, sans-serif;
+
+            h3 {
+                font-size: larger;
+                margin-bottom: 2.5vh;
+            }
+            img {
+                width: 100%;
+                margin-bottom: 5vh;
+                filter: contrast(1.25);
+            }
+            .text {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5vh;
+                p {
+                    font-size: medium;
+                    font-weight: 100;
+                }
+                b {
+                    text-align: center;
+                    font-size: large;
+                }
+            }
+        }
+    }
+
+    .values {
+        display: flex;
+        flex-direction: column;
+        color:white;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+
+        h1 {
+            padding: 3vh 0;
+            font-size: 40pt
+        }
+
+        p {
+            font-size: medium;
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: 1.5vh;
+            filter: contrast(1.25);
+        }
+    }
+}
+
+@media screen and (max-width: 991px) and (pointer: coarse) {
+    main {
+        .company_profile {
+            gap: 2vh;
+            .container {
+                h1 {font-size: 20pt;}
+            }
+            .image_text {
+                flex-direction: column;
+                .text, img {width: 100%;}
+                p {text-align: center;}
+                .text{
+                    p {
+                        font-size: medium;
+                    }
+                }
+            }
+            #right_side {
+                flex-direction: column-reverse;
+                p {
+                    text-align: center;
+                    font-size: medium;
+                }
+            }
+        }
+        h2 {padding: 1vh 0;}
+        .exchange {
+            .shell_inner {
+                padding: 2vh 0;
+                flex-direction: column;
+                img {
+                    position: static;
+                    filter: brightness(1);
+                    margin-bottom: 2vh;
+                }
+                p {
+                    font-size: medium;
+                    text-align: center;
+                }
+            }
+        }
+        .warranty {
+            span, p {font-size: medium;}
+            span {a {font-size: small;}}
+        }
+        .values {
+            h1 {font-size: 15pt;}
+            p {font-size: 11pt;}
+        }
+    }
+}

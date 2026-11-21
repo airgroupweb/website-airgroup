@@ -1,0 +1,59 @@
+.location {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2vh;
+  color: white;
+  text-align: left;
+  font-weight: 100;
+  font-family: Helvetica, sans-serif;
+  padding: 10vh 0;
+}
+.location p, .location a {
+  font-size: medium;
+}
+.location #guide {
+  font-style: italic;
+  padding: 2vh 0;
+}
+.location .map {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.location .map img {
+  height: 40vh;
+  transition: height 300ms;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.location .map:hover img {
+  height: 41vh;
+}
+
+@media screen and (max-width: 991px) and (pointer: coarse) {
+  .location {
+    text-align: center;
+    flex-direction: column;
+    padding: 2vh 0;
+  }
+  .location .address {
+    text-align: left;
+  }
+  .location p, .location a {
+    font-size: small;
+    font-weight: 100;
+  }
+  .location #guide {
+    padding: 3vh 0;
+  }
+  .location .map {
+    width: 100%;
+  }
+  .location .map img {
+    width: 100%;
+    height: auto;
+  }
+  .location .map:hover img {
+    height: auto;
+  }
+}/*# sourceMappingURL=contacts.css.map */
